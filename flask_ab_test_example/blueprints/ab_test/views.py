@@ -16,3 +16,7 @@ def check_primary_btn_click():
 def check_secondary_btn_click():
     finished('secondary_btn_text')
     return render_template('thanks.html')
+
+@ab_test.route('/ab_test_full_page')
+def check_full_page():
+    return render_template(ab_test('page_checker','page1.html', 'page2.html'))
